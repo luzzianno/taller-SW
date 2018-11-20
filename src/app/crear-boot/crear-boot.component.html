@@ -1,8 +1,7 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 </head>
 <body>
   <div class = "container app" id="container">
@@ -16,7 +15,7 @@
             <label for="nombre" class="control-label col-sm-2">
               Nombre:
             </label>
-            <div class="col-sm-8">
+            <div class="col-sm-10">
               <input type="text" required ngModel name="bot.nombre" #nombre="ngModel" name="nombre" id="nombre" class="form-control">
               <div class="alert alert-danger" *ngIf="nombre.touched && !nombre.valid">
                 Nombre requerido
@@ -28,7 +27,7 @@
             <label for="apellido" class="control-label col-sm-2">
               Apellido
             </label>
-            <div class="col-sm-8">
+            <div class="col-sm-10">
               <input type="text" required ngModel name="bot.apellido" #apellido="ngModel" name="apellido" id="apellido" class="form-control">
               <div class="alert alert-danger" *ngIf="apellido.touched && !apellido.valid">
                 Apellido requerido
@@ -40,7 +39,7 @@
             <label for="sex" class="control-label col-sm-2">
               Sexo
             </label>
-            <div class = "col-sm-8">
+            <div class = "col-sm-10">
               <select class = "form-control" name="sex" id="sex">
                 <option selected>Elige Sexo</option>
                 <option value="1">Masculino</option>
@@ -54,16 +53,16 @@
             <label for="calle" class="control-label col-sm-2">
               Calle
             </label>
-            <div class="col-sm-8">
+            <div class="col-sm-10">
               <input type="text" required ngModel name="bot.calle" #calle="ngModel" name="calle" id="calle" class="form-control">
             </div>
           </div>
 
           <div class="form-group">
-            <label for="postal" class="control-label col-sm-2">
+            <label for="postal" class="control-label col-sm-3">
               Codigo Postal
             </label>
-            <div class="col-sm-8">
+            <div class="col-sm-10">
               <input type="number" required ngModel name="bot.postal" #calle="ngModel" name="postal" id="postal" class="form-control">
             </div>
           </div>
@@ -72,7 +71,7 @@
             <label for="ciudad" class="control-label col-sm-2">
               Ciudad
             </label>
-            <div class="col-sm-8">
+            <div class="col-sm-10">
               <input type="text" required ngModel name="bot.ciudad" #ciudad="ngModel" name="ciudad" id="ciudad" class="form-control">
             </div>
           </div>
@@ -81,7 +80,7 @@
               <label for="pais" class="control-label col-sm-2">
                 País
               </label>
-              <div class = "col-sm-8">
+              <div class = "col-sm-10">
                 <select name="pais" class="form-control" name="pais" id="pais">
                 <option selected>Elige País</option>
                 <option value="AF">Afganistán</option>
@@ -323,10 +322,10 @@
             </div>
 
           <div class="form-group">
-            <label for="fechanac" class="control-label col-sm-2">
+            <label for="fechanac" class="control-label col-sm-3">
               Fecha Nacimiento
             </label>
-            <div class="col-sm-8">
+            <div class="col-sm-10">
               <input type="date" required ngModel name="bot.fechanac" #fechanac="ngModel" name="fechanac" id="calle" class="form-control">
             </div>
           </div>
@@ -335,8 +334,8 @@
             <label for="tags" class="control-label col-sm-2">
               Tags
             </label>
-            <div class="col-sm-8">
-              <tag-input theme='bootstrap' required ngModel name='bot.tags' #tags="ngModel" name="tags" id="tags" placeholder="tag"></tag-input>
+            <div class="col-sm-10">
+              <tag-input theme='bootstrap' required ngModel name='bot.tags' #tags="ngModel" name="tags" id="tags" placeholder="tag" class="form-control"></tag-input>
               <div class="alert alert-danger" *ngIf="tags.touched && !tags.valid">
                 Tags Requeridos
               </div>
@@ -344,10 +343,10 @@
           </div>
         </form>
         <div class="form-group">
-            <div class="col-sm col-sm-offset-12">
-              <button type="button" class="btn btn-info btn-circle btn-lg"><i class="glyphicon glyphicon-triangle-right"></i></button>
-            </div>
+          <div class="center">
+            <button type="button" class="btn btn-info btn-circle btn-lg pull-right mb-2"><span class="fas fa-angle-double-right"></span></button>
           </div>
+        </div>
       </div>
     </div>
   </div>
